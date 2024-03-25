@@ -54,7 +54,7 @@ const Sidebar = () => {
           initial={{ opacity: 0, x: -2000 * (i + 1) }}
           animate={{ opacity: 1, x: 0 }}
         >
-          <ul className="list-none p-0 w-[200px]">
+          <ul className="list-none p-0 min-w-[200px]">
             {
               <motion.li
                 className="mb-4 text-xl p-1.5 cursor-pointer rounded-[10px] shadow-[0px_0px_10px_rgba(0,0,0,0.1)]"

@@ -16,7 +16,7 @@ export default function Home() {
             <Sidebar />
           </section>
 
-          <div className="bg-[#f8eadd] m-[0_30px] p-[10px_10px] rounded-[20px]">
+          <div className="bg-[#f8eadd] m-[0_30px] p-[10px_1px] rounded-[20px]">
             <h1 className="font-bold text-4xl pl-[40px]">All Books</h1>
             <ul className="list-none flex flex-wrap justify-between">
               {books.map((book, i) => (
