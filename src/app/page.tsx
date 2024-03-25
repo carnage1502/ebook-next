@@ -1,4 +1,5 @@
 "use client";
+import BookCard from "@/components/BookCard";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { books } from "@/constants/mockData";
@@ -15,9 +16,9 @@ export default function Home() {
             <Sidebar />
           </section>
 
-          <div>
-            <h1 className="font-bold text-4xl">All Books</h1>
-            <ul>
+          <div className="bg-[#f8eadd] m-[0_30px] p-[10px_10px] rounded-[20px]">
+            <h1 className="font-bold text-4xl pl-[40px]">All Books</h1>
+            <ul className="list-none flex flex-wrap justify-between">
               {books.map((book, i) => (
                 <motion.li
                   key={i}
@@ -27,8 +28,12 @@ export default function Home() {
                   initial={{ opacity: 0, x: 200 * (i + 1) }}
                   animate={{ opacity: 1, x: 0 }}
                 >
-                  <a href={`/book/${book.id}`}>
-                    <p>{book.title}</p>
+                  <a href={`/book/${book.id}`} className="no-underline">
+                    <BookCard
+                      title={book.title}
+                      coverImage={book.image}
+                      description={book.description}
+                    />
                   </a>
                 </motion.li>
               ))}

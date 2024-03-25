@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center pt-4 pr-4 pb-4 pl-0 text-white">
+    <header className="flex justify-between items-center p-[1rem_1rem_1rem_0] text-white">
       <motion.div
         className="flex items-center"
         transition={{ type: "spring", damping: 18, mass: 0.75 }}
@@ -15,7 +15,7 @@ const Header = () => {
         <motion.input
           type="text"
           placeholder="Search.."
-          className="py-3 px-4 ml-14 rounded-[70px] bg-[rgb(248,234,221)] border-2 border-solid border-[#000] min-w-[320px]"
+          className="p-[0.7rem_1rem] ml-14 rounded-[70px] bg-[rgb(248,234,221)] border-2 border-solid border-[#000] min-w-[320px]"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
         />
@@ -31,7 +31,7 @@ const Header = () => {
           <motion.img
             src="/avatar.png"
             alt="avatar"
-            className="w-[40px] rounded-[50%] h-[44px]"
+            className="w-[40px] h-[40px] rounded-[50%]"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
           />
